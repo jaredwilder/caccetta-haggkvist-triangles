@@ -1,0 +1,45 @@
+{
+  "schema": "oracle.ch3.asset-extraction.v2",
+  "date": "2026-08-06",
+  "flagship": "Caccetta\u2013H\u00e4ggkvist directed-triangle case",
+  "flagship_status": "OPEN",
+  "exact_boundary_kernel": {
+    "n": "3*d",
+    "oriented": true,
+    "row_sum": "d",
+    "triangle_free": true,
+    "matrix_constraints": [
+      "A * 1 = d * 1",
+      "A hadamard A^T = 0",
+      "A^2 hadamard A^T = 0",
+      "diag(A)=0"
+    ]
+  },
+  "principal_supported_result": {
+    "name": "Cubic Directed-C4 Theorem",
+    "statement": "C4(D) >= ceil(3*d^3/2)",
+    "equivalent": "trace(A^4) >= 6*d^3",
+    "authority": "PROPOSAL_AWAITING_EXTERNAL_MACHINE_CHECK"
+  },
+  "principal_surviving_identity": "trace(A^4)=||A^2||_F^2-(1/2)||A^2-(A^T)^2||_F^2",
+  "exact_missing_obligation": "Control skew two-path energy strongly enough to make the exact-boundary kernel infeasible.",
+  "do_not_use": [
+    "Exact Hereditary Edge Bound",
+    "Five-Sixths Escape Theorem",
+    "Seven-Sixths Indegree Barrier",
+    "0.68614d fan bound",
+    "near-Mantel density close based on F(s)"
+  ],
+  "verification_targets": [
+    "A-to-B exclusion",
+    "escape mass per root",
+    "exact nonedge count",
+    "opposite-path product inequality",
+    "directed-C4 double counting",
+    "fourth-moment trace equality",
+    "row-energy floor",
+    "symmetric/skew decomposition",
+    "strong connectivity under minimality",
+    "aperiodicity under minimality"
+  ]
+}

@@ -1,0 +1,1418 @@
+{
+  "schema": "oracle.ch3.theorem-dependency-graph.v1",
+  "nodes": [
+    {
+      "id": "R1-L1",
+      "name": "Neighborhood Acyclicity Pressure",
+      "status": "SUPPORTED",
+      "round": 1
+    },
+    {
+      "id": "R1-L2",
+      "name": "Half-Degree Escape Lemma",
+      "status": "SUPPORTED",
+      "round": 1
+    },
+    {
+      "id": "R1-L3",
+      "name": "Minimal-Counterexample Hereditary Deficit",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 1
+    },
+    {
+      "id": "R1-ME",
+      "name": "Minimal Escape Lemma",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 1
+    },
+    {
+      "id": "T1",
+      "name": "Arc-Minimal Regularization Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T2",
+      "name": "Forbidden Residue Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T3",
+      "name": "Universal Minimum-Tail Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T4",
+      "name": "Hereditary Deficit Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T5",
+      "name": "Exact Escape Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T6",
+      "name": "A-to-B Exclusion Theorem",
+      "status": "SUPPORTED",
+      "round": 2
+    },
+    {
+      "id": "T7",
+      "name": "Quadratic Escape-Mass Theorem",
+      "status": "SUPPORTED",
+      "round": 2
+    },
+    {
+      "id": "T8",
+      "name": "Two-Thirds Escape Vertex Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T9",
+      "name": "Second-Generation Forbidden-Indegree Theorem",
+      "status": "SUPPORTED",
+      "round": 2
+    },
+    {
+      "id": "T10",
+      "name": "Second-Escape Compression Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T11",
+      "name": "Pair-Cell Indegree Ceiling",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 2
+    },
+    {
+      "id": "T12",
+      "name": "Layer-Folding Obstruction Theorem",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 2
+    },
+    {
+      "id": "CA",
+      "name": "Candidate A \u2014 Fold-or-Triangle Lemma",
+      "status": "PROPOSAL",
+      "round": 2
+    },
+    {
+      "id": "CB",
+      "name": "Candidate B \u2014 Selected-Vertex Indegree Floor",
+      "status": "PROPOSAL",
+      "round": 2
+    },
+    {
+      "id": "CC",
+      "name": "Candidate C \u2014 Weighted Pair-Cell Inequality",
+      "status": "PROPOSAL",
+      "round": 2
+    },
+    {
+      "id": "T13",
+      "name": "Universal Three-Chamber Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T14",
+      "name": "Exact Escape-Slack Identity",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T15",
+      "name": "Nonneighbor Capacity Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T16",
+      "name": "Global Nonneighbor Conservation Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T17",
+      "name": "Global Defect Budget Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T18",
+      "name": "Directed Two-Path Classification Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T19",
+      "name": "Global Escape-Path Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T20",
+      "name": "Common-Inneighborhood Identity",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T21",
+      "name": "Folding Conservation Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T22",
+      "name": "High-Multiplicity Escape Pair Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T23",
+      "name": "Parallel-Bridge Chamber Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T24",
+      "name": "Rectangle-to-C4 Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T25",
+      "name": "Fold-or-Expansion Theorem",
+      "status": "SUPPORTED_DICHOTOMY",
+      "round": 3
+    },
+    {
+      "id": "T26",
+      "name": "Rectangle Orientation Theorem",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "T27",
+      "name": "Four-Chamber Extremal Skeleton Theorem",
+      "status": "STRUCTURAL_SYNTHESIS",
+      "round": 3
+    },
+    {
+      "id": "T28",
+      "name": "One-Way Rectangle Saturation Lemma",
+      "status": "SUPPORTED",
+      "round": 3
+    },
+    {
+      "id": "CD",
+      "name": "Candidate D \u2014 Rectangle Diversity Lemma",
+      "status": "PROPOSAL",
+      "round": 3
+    },
+    {
+      "id": "CE",
+      "name": "Candidate E \u2014 Common-Inneighborhood Compression Lemma",
+      "status": "PROPOSAL",
+      "round": 3
+    },
+    {
+      "id": "T29",
+      "name": "Escape Multiplicity Identity",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T30",
+      "name": "Ordered Nonadjacency Identity",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T31",
+      "name": "Super-Half Bridge Theorem",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T32",
+      "name": "Bidirectional Bridge Exclusion Theorem",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T33",
+      "name": "Bridge Deficit Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 4
+    },
+    {
+      "id": "T34",
+      "name": "Reverse-Bridge Capacity Theorem",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T35",
+      "name": "Total Bridge Energy Identity",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T36",
+      "name": "Indegree\u2013Bridge Amplification Theorem",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T37",
+      "name": "Exact Closure Criterion",
+      "status": "SUPPORTED_SUFFICIENT_CONDITIONS",
+      "round": 4
+    },
+    {
+      "id": "T38",
+      "name": "Half-Bridge Closure Theorem",
+      "status": "SUPPORTED_IMPLICATION_ONLY",
+      "round": 4
+    },
+    {
+      "id": "T39",
+      "name": "Half-Bridge Failure Structure Theorem",
+      "status": "SUPPORTED",
+      "round": 4
+    },
+    {
+      "id": "T40",
+      "name": "High-Indegree Root Theorem",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T41",
+      "name": "Root Escape-Energy Theorem",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T42",
+      "name": "Bridge Export Theorem",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T43",
+      "name": "Reverse-Wall Theorem",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T44",
+      "name": "Two-Block Degree Identity",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T45",
+      "name": "Bridge Collision Identity",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T46",
+      "name": "Double-Wall Escape Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 5
+    },
+    {
+      "id": "T47",
+      "name": "Transitive-Fan Obstruction Theorem",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 5
+    },
+    {
+      "id": "T48",
+      "name": "Fan-Reversal Closure Criterion",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T49",
+      "name": "One-Way Fan Capacity Inequality",
+      "status": "SUPPORTED",
+      "round": 5
+    },
+    {
+      "id": "T50",
+      "name": "Cubic-Zero Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T51",
+      "name": "Reverse-Arc Annihilation Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T52",
+      "name": "Two-Path Mass Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T53",
+      "name": "Exact Support Partition Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T54",
+      "name": "Escape-Mass Floor",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T55",
+      "name": "Two-Path Collision Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T56",
+      "name": "Global Fan-Energy Identity",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T57",
+      "name": "Row Concentration Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T58",
+      "name": "Fan-Energy Floor",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T59",
+      "name": "Multiplicity-Collapse Obstruction",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 6
+    },
+    {
+      "id": "T60",
+      "name": "Maximal-Bridge Matrix Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T61",
+      "name": "Large Transitive-or-Escape Fan Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T62",
+      "name": "Fan-Coherence Closure Theorem",
+      "status": "PROPOSAL_UNVERIFIED",
+      "round": 6
+    },
+    {
+      "id": "T63",
+      "name": "Fan-Union Inequality",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T64",
+      "name": "Second-Order Concentration Theorem",
+      "status": "SUPPORTED",
+      "round": 6
+    },
+    {
+      "id": "T65",
+      "name": "Fan Cascade Theorem",
+      "status": "RETRACTED_OVERCLAIM",
+      "round": 6
+    },
+    {
+      "id": "T66",
+      "name": "Fan Rectangle Prohibition Theorem",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T67",
+      "name": "Universal Fan Capacity Theorem",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T68",
+      "name": "Universal Indegree Ceiling",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T69",
+      "name": "Common-Out Sum Identity",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T70",
+      "name": "Fan Energy Identity",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T71",
+      "name": "Common-Out Energy Floor",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T72",
+      "name": "Two-Path Energy Floor",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T73",
+      "name": "Fan-Capacity Saturation Theorem",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T74",
+      "name": "Global Slack Identity",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T75",
+      "name": "Elimination-Ordering Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 7
+    },
+    {
+      "id": "T76",
+      "name": "Exact Hereditary Edge Bound",
+      "status": "RETRACTED",
+      "round": 7
+    },
+    {
+      "id": "T77",
+      "name": "Hereditarily Sharpened Fan Capacity Theorem",
+      "status": "RETRACTED",
+      "round": 7
+    },
+    {
+      "id": "T78",
+      "name": "Coefficient Required for Closure",
+      "status": "CONDITIONAL_META",
+      "round": 7
+    },
+    {
+      "id": "T79",
+      "name": "One-Pair Strategy Impossibility Theorem",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 7
+    },
+    {
+      "id": "T80",
+      "name": "Triple-Fan Prohibition Theorem",
+      "status": "SUPPORTED",
+      "round": 7
+    },
+    {
+      "id": "T81",
+      "name": "Five-Sixths Escape Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T82",
+      "name": "Five-Sixths Bridge Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T83",
+      "name": "Hereditary Bridge Export Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T84",
+      "name": "Seven-Sixths Indegree Barrier",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T85",
+      "name": "Low-Indegree Mass Bound",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T86",
+      "name": "Near-Regular Core Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T87",
+      "name": "Boundary Bridge Rigidity Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T88",
+      "name": "Full-Bridge Boundary Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T89",
+      "name": "Multi-Sink Rigidity Theorem",
+      "status": "RETRACTED",
+      "round": 8
+    },
+    {
+      "id": "T90",
+      "name": "Blow-Up Backflow Prohibition Theorem",
+      "status": "PARTIAL_LOCAL_FACT",
+      "round": 8
+    },
+    {
+      "id": "T91",
+      "name": "Inneighborhood-Union Closure Criterion",
+      "status": "PROPOSAL",
+      "round": 8
+    },
+    {
+      "id": "T92",
+      "name": "Three-Layer Product-Zero Theorem",
+      "status": "SUPPORTED",
+      "round": 8
+    },
+    {
+      "id": "T93",
+      "name": "Tripartite Closure Criterion",
+      "status": "PROPOSAL_UNVERIFIED",
+      "round": 8
+    },
+    {
+      "id": "T94",
+      "name": "Corrected High-Root Barrier",
+      "status": "RETRACTED",
+      "round": 9
+    },
+    {
+      "id": "T95",
+      "name": "A-to-B Zero Theorem",
+      "status": "SUPPORTED",
+      "round": 9
+    },
+    {
+      "id": "T96",
+      "name": "First Cyclic-Layer Lower Bound",
+      "status": "RETRACTED",
+      "round": 9
+    },
+    {
+      "id": "T97",
+      "name": "M-to-B Lower Bound",
+      "status": "RETRACTED",
+      "round": 9
+    },
+    {
+      "id": "T98",
+      "name": "B-to-A Lower Bound",
+      "status": "RETRACTED",
+      "round": 9
+    },
+    {
+      "id": "T99",
+      "name": "Three-Layer Density Ledger",
+      "status": "RETRACTED",
+      "round": 9
+    },
+    {
+      "id": "T100",
+      "name": "Mantel Gap Theorem",
+      "status": "RETRACTED_ROUTE",
+      "round": 9
+    },
+    {
+      "id": "T101",
+      "name": "Split-Chamber Obstruction Theorem",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 9
+    },
+    {
+      "id": "T102",
+      "name": "Forbidden-Rectangle Union Theorem",
+      "status": "SUPPORTED",
+      "round": 9
+    },
+    {
+      "id": "T103",
+      "name": "Anticorrelation-or-Overlap Closure Theorem",
+      "status": "PROPOSAL",
+      "round": 9
+    },
+    {
+      "id": "T104",
+      "name": "One-Sided Peeling Does Not Count All Arcs",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T105",
+      "name": "Exact Refutation of the Hereditary Edge Bound",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T106",
+      "name": "Outneighborhood Wall Theorem",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T107",
+      "name": "Exact Local Defect Identity",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T108",
+      "name": "Reverse-Arc Annihilation Theorem",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T109",
+      "name": "Two-Path Conservation Theorem",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T110",
+      "name": "Valid Indegree Ceiling",
+      "status": "SUPPORTED",
+      "round": 10
+    },
+    {
+      "id": "T111",
+      "name": "Correct Terminal Obstruction Theorem",
+      "status": "SUPPORTED_SUMMARY",
+      "round": 10
+    },
+    {
+      "id": "T112",
+      "name": "Machine Closure Contract",
+      "status": "PROTOCOL",
+      "round": 10
+    },
+    {
+      "id": "T113",
+      "name": "Rooted Chamber Equations",
+      "status": "SUPPORTED",
+      "round": 11
+    },
+    {
+      "id": "T114",
+      "name": "Rooted Cyclic Product-Zero Theorem",
+      "status": "SUPPORTED",
+      "round": 11
+    },
+    {
+      "id": "T115",
+      "name": "Tripartite Union-Bound Theorem",
+      "status": "SUPPORTED",
+      "round": 11
+    },
+    {
+      "id": "T116",
+      "name": "Valid M-to-B Floor",
+      "status": "SUPPORTED",
+      "round": 11
+    },
+    {
+      "id": "T117",
+      "name": "Exact B-to-A Ledger",
+      "status": "SUPPORTED",
+      "round": 11
+    },
+    {
+      "id": "T118",
+      "name": "Missing Cyclic Edge Theorem",
+      "status": "SUPPORTED_DIAGNOSIS",
+      "round": 11
+    },
+    {
+      "id": "T119",
+      "name": "Backward Reservoir Theorem",
+      "status": "SUPPORTED",
+      "round": 11
+    },
+    {
+      "id": "T120",
+      "name": "Backward-Hierarchy Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 11
+    },
+    {
+      "id": "T121",
+      "name": "Two-Reservoir Classification Theorem",
+      "status": "STRUCTURAL_SYNTHESIS",
+      "round": 11
+    },
+    {
+      "id": "T122",
+      "name": "Pair-Marginal Phantom Theorem",
+      "status": "PROPOSAL_MODEL",
+      "round": 11
+    },
+    {
+      "id": "T123",
+      "name": "Five-Flag Necessity Theorem",
+      "status": "METHODOLOGICAL",
+      "round": 11
+    },
+    {
+      "id": "R12-T124",
+      "name": "Second-Neighborhood Deficit Theorem",
+      "status": "SUPPORTED",
+      "round": 12
+    },
+    {
+      "id": "R12-T125",
+      "name": "Folding Creates Codegree",
+      "status": "SUPPORTED",
+      "round": 12
+    },
+    {
+      "id": "R12-T126",
+      "name": "Concentration Self-Bound",
+      "status": "PARTIAL_RETRACTED",
+      "round": 12
+    },
+    {
+      "id": "R12-T127",
+      "name": "Forced Double-Codegree Alternative",
+      "status": "PROPOSAL_QUALITATIVE",
+      "round": 12
+    },
+    {
+      "id": "R13-T124",
+      "name": "Retraction of the 0.686d Fan Bound",
+      "status": "SUPPORTED",
+      "round": 13
+    },
+    {
+      "id": "R13-T125",
+      "name": "Maximum-Fan Kernel",
+      "status": "SUPPORTED",
+      "round": 13
+    },
+    {
+      "id": "R13-T126",
+      "name": "Zero-Support Maximum-Fan Inequality",
+      "status": "SUPPORTED",
+      "round": 13
+    },
+    {
+      "id": "R13-T127",
+      "name": "Fan-to-Inneighborhood Rectangle",
+      "status": "SUPPORTED",
+      "round": 13
+    },
+    {
+      "id": "R13-T128",
+      "name": "Weighted Maximum-Fan Selection",
+      "status": "SUPPORTED",
+      "round": 13
+    },
+    {
+      "id": "R13-T129",
+      "name": "Dual Fan Theorem",
+      "status": "SUPPORTED",
+      "round": 13
+    },
+    {
+      "id": "T130",
+      "name": "First Three Vanishing Trace Theorem",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T131",
+      "name": "Perron Moment Cancellation Theorem",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T132",
+      "name": "Singular-Energy Budget Theorem",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T133",
+      "name": "Spectral Modulus Budget",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T134",
+      "name": "Cubic Defect Identity",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T135",
+      "name": "Real-Part Defect Formula",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T136",
+      "name": "Peripheral Period Theorem",
+      "status": "SUPPORTED_STANDARD",
+      "round": 14
+    },
+    {
+      "id": "T137",
+      "name": "Aperiodicity Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 14
+    },
+    {
+      "id": "T138",
+      "name": "Strong Connectivity Theorem",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 14
+    },
+    {
+      "id": "T139",
+      "name": "Strict Spectral Radius Gap",
+      "status": "SUPPORTED_CONDITIONAL",
+      "round": 14
+    },
+    {
+      "id": "T140",
+      "name": "Abstract Spectral Phantom",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 14
+    },
+    {
+      "id": "T141",
+      "name": "Energy Equality Rigidity Theorem",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T142",
+      "name": "Exact Integral Row-Energy Floor",
+      "status": "SUPPORTED",
+      "round": 14
+    },
+    {
+      "id": "T143",
+      "name": "Opposite Two-Path Product Theorem",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T144",
+      "name": "Opposite Vertices Are Nonadjacent",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T145",
+      "name": "Exact Nonedge Count",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T146",
+      "name": "Escape-Mass Floor",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T147",
+      "name": "Forced Opposite-Path Product Theorem",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T148",
+      "name": "Cubic Directed-C4 Theorem",
+      "status": "SUPPORTED_TERMINAL_ASSET",
+      "round": 15
+    },
+    {
+      "id": "T149",
+      "name": "Every Kernel Contains a Directed C4",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T150",
+      "name": "Heavy Four-Cycle Vertex Theorem",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T151",
+      "name": "Heavy Bidirectional Bridge Theorem",
+      "status": "SUPPORTED",
+      "round": 15
+    },
+    {
+      "id": "T152",
+      "name": "Asymmetric Four-Cycle Reservoir Theorem",
+      "status": "STRUCTURAL_DIAGNOSIS",
+      "round": 15
+    },
+    {
+      "id": "T153",
+      "name": "Exact Fourth-Moment Decomposition",
+      "status": "SUPPORTED",
+      "round": 15
+    }
+  ],
+  "edges": [
+    {
+      "from": "R1-L3",
+      "to": "R1-ME",
+      "type": "dependency"
+    },
+    {
+      "from": "T4",
+      "to": "T5",
+      "type": "dependency"
+    },
+    {
+      "from": "T6",
+      "to": "T7",
+      "type": "dependency"
+    },
+    {
+      "from": "T4",
+      "to": "T8",
+      "type": "dependency"
+    },
+    {
+      "from": "T6",
+      "to": "T8",
+      "type": "dependency"
+    },
+    {
+      "from": "T4",
+      "to": "T10",
+      "type": "dependency"
+    },
+    {
+      "from": "T9",
+      "to": "T10",
+      "type": "dependency"
+    },
+    {
+      "from": "T10",
+      "to": "T11",
+      "type": "dependency"
+    },
+    {
+      "from": "T11",
+      "to": "CC",
+      "type": "dependency"
+    },
+    {
+      "from": "T13",
+      "to": "T14",
+      "type": "dependency"
+    },
+    {
+      "from": "T14",
+      "to": "T15",
+      "type": "dependency"
+    },
+    {
+      "from": "T15",
+      "to": "T17",
+      "type": "dependency"
+    },
+    {
+      "from": "T16",
+      "to": "T17",
+      "type": "dependency"
+    },
+    {
+      "from": "T14",
+      "to": "T19",
+      "type": "dependency"
+    },
+    {
+      "from": "T19",
+      "to": "T21",
+      "type": "dependency"
+    },
+    {
+      "from": "T20",
+      "to": "T21",
+      "type": "dependency"
+    },
+    {
+      "from": "T19",
+      "to": "T22",
+      "type": "dependency"
+    },
+    {
+      "from": "T24",
+      "to": "T25",
+      "type": "dependency"
+    },
+    {
+      "from": "T22",
+      "to": "T27",
+      "type": "dependency"
+    },
+    {
+      "from": "T26",
+      "to": "T27",
+      "type": "dependency"
+    },
+    {
+      "from": "T14",
+      "to": "T29",
+      "type": "dependency"
+    },
+    {
+      "from": "T19",
+      "to": "T29",
+      "type": "dependency"
+    },
+    {
+      "from": "T29",
+      "to": "T31",
+      "type": "dependency"
+    },
+    {
+      "from": "T30",
+      "to": "T31",
+      "type": "dependency"
+    },
+    {
+      "from": "T35",
+      "to": "T36",
+      "type": "dependency"
+    },
+    {
+      "from": "T29",
+      "to": "T38",
+      "type": "dependency"
+    },
+    {
+      "from": "T30",
+      "to": "T38",
+      "type": "dependency"
+    },
+    {
+      "from": "T32",
+      "to": "T39",
+      "type": "dependency"
+    },
+    {
+      "from": "T6",
+      "to": "T41",
+      "type": "dependency"
+    },
+    {
+      "from": "T51",
+      "to": "T53",
+      "type": "dependency"
+    },
+    {
+      "from": "T53",
+      "to": "T54",
+      "type": "dependency"
+    },
+    {
+      "from": "T55",
+      "to": "T56",
+      "type": "dependency"
+    },
+    {
+      "from": "T57",
+      "to": "T58",
+      "type": "dependency"
+    },
+    {
+      "from": "T58",
+      "to": "T60",
+      "type": "dependency"
+    },
+    {
+      "from": "T60",
+      "to": "T61",
+      "type": "dependency"
+    },
+    {
+      "from": "T51",
+      "to": "T61",
+      "type": "dependency"
+    },
+    {
+      "from": "T63",
+      "to": "T64",
+      "type": "dependency"
+    },
+    {
+      "from": "T66",
+      "to": "T67",
+      "type": "dependency"
+    },
+    {
+      "from": "T55",
+      "to": "T70",
+      "type": "dependency"
+    },
+    {
+      "from": "T58",
+      "to": "T72",
+      "type": "dependency"
+    },
+    {
+      "from": "T73",
+      "to": "T74",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T77",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T81",
+      "type": "dependency"
+    },
+    {
+      "from": "T81",
+      "to": "T82",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T83",
+      "type": "dependency"
+    },
+    {
+      "from": "T81",
+      "to": "T84",
+      "type": "dependency"
+    },
+    {
+      "from": "T83",
+      "to": "T84",
+      "type": "dependency"
+    },
+    {
+      "from": "T84",
+      "to": "T85",
+      "type": "dependency"
+    },
+    {
+      "from": "T84",
+      "to": "T86",
+      "type": "dependency"
+    },
+    {
+      "from": "T81",
+      "to": "T87",
+      "type": "dependency"
+    },
+    {
+      "from": "T84",
+      "to": "T87",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T88",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T94",
+      "type": "dependency"
+    },
+    {
+      "from": "T6",
+      "to": "T95",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T96",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T97",
+      "type": "dependency"
+    },
+    {
+      "from": "T76",
+      "to": "T98",
+      "type": "dependency"
+    },
+    {
+      "from": "T96",
+      "to": "T99",
+      "type": "dependency"
+    },
+    {
+      "from": "T98",
+      "to": "T99",
+      "type": "dependency"
+    },
+    {
+      "from": "T99",
+      "to": "T100",
+      "type": "dependency"
+    },
+    {
+      "from": "T102",
+      "to": "T103",
+      "type": "dependency"
+    },
+    {
+      "from": "T75",
+      "to": "T104",
+      "type": "dependency"
+    },
+    {
+      "from": "T106",
+      "to": "T107",
+      "type": "dependency"
+    },
+    {
+      "from": "T107",
+      "to": "T110",
+      "type": "dependency"
+    },
+    {
+      "from": "T113",
+      "to": "T118",
+      "type": "dependency"
+    },
+    {
+      "from": "T117",
+      "to": "T118",
+      "type": "dependency"
+    },
+    {
+      "from": "T117",
+      "to": "T119",
+      "type": "dependency"
+    },
+    {
+      "from": "T75",
+      "to": "T120",
+      "type": "dependency"
+    },
+    {
+      "from": "T104",
+      "to": "T120",
+      "type": "dependency"
+    },
+    {
+      "from": "T119",
+      "to": "T121",
+      "type": "dependency"
+    },
+    {
+      "from": "T7",
+      "to": "R12-T124",
+      "type": "dependency"
+    },
+    {
+      "from": "T57",
+      "to": "R12-T125",
+      "type": "dependency"
+    },
+    {
+      "from": "T127",
+      "to": "R13-T129",
+      "type": "dependency"
+    },
+    {
+      "from": "T128",
+      "to": "R13-T129",
+      "type": "dependency"
+    },
+    {
+      "from": "T130",
+      "to": "T131",
+      "type": "dependency"
+    },
+    {
+      "from": "T138",
+      "to": "T137",
+      "type": "dependency"
+    },
+    {
+      "from": "T137",
+      "to": "T139",
+      "type": "dependency"
+    },
+    {
+      "from": "T145",
+      "to": "T147",
+      "type": "dependency"
+    },
+    {
+      "from": "T146",
+      "to": "T147",
+      "type": "dependency"
+    },
+    {
+      "from": "T143",
+      "to": "T148",
+      "type": "dependency"
+    },
+    {
+      "from": "T147",
+      "to": "T148",
+      "type": "dependency"
+    },
+    {
+      "from": "T148",
+      "to": "T149",
+      "type": "dependency"
+    },
+    {
+      "from": "T148",
+      "to": "T150",
+      "type": "dependency"
+    }
+  ]
+}

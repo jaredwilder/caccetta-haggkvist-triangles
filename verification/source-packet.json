@@ -1,0 +1,109 @@
+{
+  "source_archive": "CACCETTA-HAGGKVIST-CH3-BIG-GUNS-ASSET-BUNDLE-2026-08-06.zip",
+  "source_archive_bytes": 62221,
+  "source_archive_sha256": "056eb7c65183c1d791cdbcf0fe7db6c2e29b52536bddcf5fd981812c2839b60a",
+  "packet_path": "source/big-guns-2026-08-06",
+  "records_path": "source/big-guns-2026-08-06/THEOREM-LEDGER.json",
+  "record_count": 166,
+  "status_counts": {
+    "SUPPORTED": 99,
+    "SUPPORTED_CONDITIONAL": 17,
+    "STRUCTURAL_DIAGNOSIS": 7,
+    "PROPOSAL": 7,
+    "SUPPORTED_DICHOTOMY": 1,
+    "STRUCTURAL_SYNTHESIS": 2,
+    "SUPPORTED_SUFFICIENT_CONDITIONS": 1,
+    "SUPPORTED_IMPLICATION_ONLY": 1,
+    "PROPOSAL_UNVERIFIED": 2,
+    "RETRACTED_OVERCLAIM": 1,
+    "RETRACTED": 16,
+    "CONDITIONAL_META": 1,
+    "PARTIAL_LOCAL_FACT": 1,
+    "RETRACTED_ROUTE": 1,
+    "SUPPORTED_SUMMARY": 1,
+    "PROTOCOL": 1,
+    "SUPPORTED_DIAGNOSIS": 1,
+    "PROPOSAL_MODEL": 1,
+    "METHODOLOGICAL": 1,
+    "PARTIAL_RETRACTED": 1,
+    "PROPOSAL_QUALITATIVE": 1,
+    "SUPPORTED_STANDARD": 1,
+    "SUPPORTED_TERMINAL_ASSET": 1
+  },
+  "original_manifest_entries_verified": 0,
+  "scope": "The original fifteen-round packet contains 166 theorem, candidate, diagnostic and retraction records. The source retraction register is essential reading. Its cubic directed-C4 result is explicitly awaiting independent verification; this release does not certify all ledger entries.",
+  "files": [
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/CH3-BIG-GUNS-MASTER-DOSSIER.md",
+      "public_path": "source/big-guns-2026-08-06/CH3-BIG-GUNS-MASTER-DOSSIER.md",
+      "bytes": 104312,
+      "sha256": "082350d530a80df925d48c9bd2f26f9875b44a22878048ee8e7a7d7f2258954c"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/CH3-PREVIOUS-COMPRESSED-EXTRACTION.md",
+      "public_path": "source/big-guns-2026-08-06/CH3-PREVIOUS-COMPRESSED-EXTRACTION.md",
+      "bytes": 36670,
+      "sha256": "b7602a640f259b5e2e69f27c4ed2461668469c23844abc587ca4b6e0509ac9ef"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/CH3-TERMINAL-AUDIT-CUBIC-C4-THEOREM.md",
+      "public_path": "source/big-guns-2026-08-06/CH3-TERMINAL-AUDIT-CUBIC-C4-THEOREM.md",
+      "bytes": 6901,
+      "sha256": "b386dcb415994a87a9f8642446f3679255dac1ce60ab72a86c46a043bb7d92e7"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/COMPUTATIONAL-ATTACK-PLAN.md",
+      "public_path": "source/big-guns-2026-08-06/COMPUTATIONAL-ATTACK-PLAN.md",
+      "bytes": 1612,
+      "sha256": "1e6eb65eaf2de6880d1b78ad0cbb93d8bc624934b3205e261a73fe9083a05ce8"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/FAILED-KILL-SHOTS.md",
+      "public_path": "source/big-guns-2026-08-06/FAILED-KILL-SHOTS.md",
+      "bytes": 2013,
+      "sha256": "880d47f75e281d4a518b5eff1f9d21aeadd19d63f5b5c4f393a8628f837c62be"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/LEAN-FORMALIZATION-PLAN.md",
+      "public_path": "source/big-guns-2026-08-06/LEAN-FORMALIZATION-PLAN.md",
+      "bytes": 1546,
+      "sha256": "4a0037b262a888ed6f9e10cd139ba3845b45bcec2c4c2ba12c10a5aebdbe5907"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/MACHINE-ATTACK-SPEC.json",
+      "public_path": "source/big-guns-2026-08-06/MACHINE-ATTACK-SPEC.json",
+      "bytes": 1419,
+      "sha256": "4e4dfaa2fa5460492feac5142c0d461e310d9e54df850ae8e90322e403a74169"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/PUBLICATION-OUTLINE.md",
+      "public_path": "source/big-guns-2026-08-06/PUBLICATION-OUTLINE.md",
+      "bytes": 1034,
+      "sha256": "1a4c645c7c0e505ba6efa323557efcf47f57a76aa3eb73936b485456125acb37"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/README.md",
+      "public_path": "source/big-guns-2026-08-06/README.md",
+      "bytes": 1263,
+      "sha256": "c33213a32bddcfe00006c262e756862c521b108c621ca098bc4215b1d81019c9"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/RETRACTION-REGISTER.md",
+      "public_path": "source/big-guns-2026-08-06/RETRACTION-REGISTER.md",
+      "bytes": 1497,
+      "sha256": "4ee123572e8a924bc927d7180d7b1a215096425ccad69ed719bd9caeb4fc5acb"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/THEOREM-DEPENDENCY-GRAPH.json",
+      "public_path": "source/big-guns-2026-08-06/THEOREM-DEPENDENCY-GRAPH.json",
+      "bytes": 28164,
+      "sha256": "44d9a0c734f6da67a3bc3418bf8c9d96bb8e8d9ae1be172a8b6490d0e45fbf55"
+    },
+    {
+      "source_member": "CH3_BIG_GUNS_ASSET_EXTRACTION_2026-08-06/THEOREM-LEDGER.json",
+      "public_path": "source/big-guns-2026-08-06/THEOREM-LEDGER.json",
+      "bytes": 61530,
+      "sha256": "025ffe64293611f25ec84c0202a66a9df966d07d4c70e59b0e7a1f71bf876034"
+    }
+  ]
+}

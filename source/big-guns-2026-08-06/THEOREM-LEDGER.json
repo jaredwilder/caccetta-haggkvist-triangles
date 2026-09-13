@@ -1,0 +1,1662 @@
+[
+  {
+    "id": "R1-L1",
+    "round": 1,
+    "name": "Neighborhood Acyclicity Pressure",
+    "status": "SUPPORTED",
+    "statement": "For every v, D[N+(v)] and D[N-(v)] are directed-triangle-free; for every arc v→x, N+(x)∩N-(v)=∅.",
+    "dependencies": "Triangle-free oriented graph.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R1-L2",
+    "round": 1,
+    "name": "Half-Degree Escape Lemma",
+    "status": "SUPPORTED",
+    "statement": "For a minimum-outdegree vertex v with d=δ+(D), some x∈N+(v) has at least (d+1)/2 outneighbors in M_v.",
+    "dependencies": "A→B exclusion; average internal outdegree in N+(v).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R1-L3",
+    "round": 1,
+    "name": "Minimal-Counterexample Hereditary Deficit",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "In a vertex-minimal counterexample, every proper nonempty S has a vertex x with d_S^+(x)<|S|/3.",
+    "dependencies": "Vertex-minimal counterexample reduction.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R1-ME",
+    "round": 1,
+    "name": "Minimal Escape Lemma",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "For every proper nonempty S, some x∈S has d^+_{V\\S}(x)>d-|S|/3.",
+    "dependencies": "R1-L3 plus δ+(D)≥d.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T1",
+    "round": 2,
+    "name": "Arc-Minimal Regularization Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "After choosing a counterexample with minimum order and then minimum arcs, every vertex has outdegree d=ceil(n/3).",
+    "dependencies": "Arc deletion cannot create triangles and preserves the threshold if a vertex had degree >d.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T2",
+    "round": 2,
+    "name": "Forbidden Residue Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "A vertex-minimal counterexample cannot have n≡1 mod 3.",
+    "dependencies": "Delete any vertex from n=3m+1; remaining minimum outdegree is at least m on 3m vertices.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T3",
+    "round": 2,
+    "name": "Universal Minimum-Tail Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "Every vertex has an incoming tail of minimum outdegree; in the arc-minimal kernel this is automatic because all vertices have outdegree d.",
+    "dependencies": "Vertex-deletion minimality; regularization.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T4",
+    "round": 2,
+    "name": "Hereditary Deficit Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "Every proper nonempty induced subgraph has minimum outdegree below one third of its order.",
+    "dependencies": "Minimal counterexample.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T5",
+    "round": 2,
+    "name": "Exact Escape Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "For every proper nonempty S, some x∈S has d^+_{V\\S}(x)≥d-ceil(|S|/3)+1.",
+    "dependencies": "T4 and exact d-out-regularity.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T6",
+    "round": 2,
+    "name": "A-to-B Exclusion Theorem",
+    "status": "SUPPORTED",
+    "statement": "For A=N+(v), B=N-(v), E(A,B)=∅.",
+    "dependencies": "Any a→b would create v→a→b→v.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T7",
+    "round": 2,
+    "name": "Quadratic Escape-Mass Theorem",
+    "status": "SUPPORTED",
+    "statement": "For |A|=d, e(A,M_v)≥d(d+1)/2 and hence |M_v|≥(d+1)/2.",
+    "dependencies": "T6; e(A)≤binom(d,2).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T8",
+    "round": 2,
+    "name": "Two-Thirds Escape Vertex Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "Some x∈A has |N_M^+(x)|≥d-ceil(d/3)+1>2d/3.",
+    "dependencies": "T4 applied to A; exact d-out-regularity; T6.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T9",
+    "round": 2,
+    "name": "Second-Generation Forbidden-Indegree Theorem",
+    "status": "SUPPORTED",
+    "statement": "If X=N_M^+(x), then for z∈X, N+(z)∩N-(x)=∅.",
+    "dependencies": "Otherwise y→x→z→y is a directed triangle.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T10",
+    "round": 2,
+    "name": "Second-Escape Compression Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "Applying hereditary deficit to X yields z∈X with a large external outneighbor set W=N+(z)\\X, disjoint from N-(x).",
+    "dependencies": "T4, exact regularity, T9.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T11",
+    "round": 2,
+    "name": "Pair-Cell Indegree Ceiling",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "For the selected x and X, d^-(x)≤n-d-|X|+ceil(|X|/3)-2.",
+    "dependencies": "T10 and disjointness of X, W, N-(x), {x}.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T12",
+    "round": 2,
+    "name": "Layer-Folding Obstruction Theorem",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "Naive recursive escape fails because later forward layers may overlap older forward layers; only immediate backward walls are forbidden.",
+    "dependencies": "Audit of the recursive expansion attempt.",
+    "audit": "",
+    "certificate_route": "Counterexample search for proposed stronger disjointness statements."
+  },
+  {
+    "id": "CA",
+    "round": 2,
+    "name": "Candidate A — Fold-or-Triangle Lemma",
+    "status": "PROPOSAL",
+    "statement": "A large overlap of a new escape layer with earlier layers should either force a triangle or pay an explicit expansion penalty.",
+    "dependencies": "Generated from failed recursive expansion.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "CB",
+    "round": 2,
+    "name": "Candidate B — Selected-Vertex Indegree Floor",
+    "status": "PROPOSAL",
+    "statement": "Select a low-internal-outdegree x with an unusually large indegree sufficient to contradict T11.",
+    "dependencies": "Generated from pair-cell close failure.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "CC",
+    "round": 2,
+    "name": "Candidate C — Weighted Pair-Cell Inequality",
+    "status": "PROPOSAL",
+    "statement": "Sum pair-cell inequalities over many low-internal-degree vertices instead of selecting one vertex.",
+    "dependencies": "Generated from distributional version of T11.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T13",
+    "round": 3,
+    "name": "Universal Three-Chamber Theorem",
+    "status": "SUPPORTED",
+    "statement": "For each x, V\\{x} partitions into P_x=N+(x), I_x=N-(x), M_x, and E(P_x,I_x)=∅.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T14",
+    "round": 3,
+    "name": "Exact Escape-Slack Identity",
+    "status": "SUPPORTED",
+    "statement": "If σ(x)=binom(d,2)-e(P_x), then e(P_x,M_x)=d(d+1)/2+σ(x).",
+    "dependencies": "d-out-regularity and T13.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T15",
+    "round": 3,
+    "name": "Nonneighbor Capacity Theorem",
+    "status": "SUPPORTED",
+    "statement": "|M_x|≥(d+1)/2+σ(x)/d, hence an indegree upper bound follows.",
+    "dependencies": "T14 and e(P_x,M_x)≤d|M_x|.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T16",
+    "round": 3,
+    "name": "Global Nonneighbor Conservation Theorem",
+    "status": "SUPPORTED",
+    "statement": "Σ_x |M_x|=n(n-1-2d); at n=3d the average is d-1.",
+    "dependencies": "Outdegree sum equals indegree sum nd.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T17",
+    "round": 3,
+    "name": "Global Defect Budget Theorem",
+    "status": "SUPPORTED",
+    "statement": "Σ_xσ(x) is bounded by the global nonneighbor budget; at n=3d, Σσ(x)≤nd(d-3)/2.",
+    "dependencies": "Sum T15 and use T16.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T18",
+    "round": 3,
+    "name": "Directed Two-Path Classification Theorem",
+    "status": "SUPPORTED",
+    "statement": "Every directed two-path x→p→y is either transitively closed by x→y or has nonadjacent endpoints; y→x is forbidden.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T19",
+    "round": 3,
+    "name": "Global Escape-Path Theorem",
+    "status": "SUPPORTED",
+    "statement": "The total escape two-path count is nd(d+1)/2+Σσ(x).",
+    "dependencies": "T14 summed over roots.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T20",
+    "round": 3,
+    "name": "Common-Inneighborhood Identity",
+    "status": "SUPPORTED",
+    "statement": "Σ_{p→y}|N-(p)∩N-(y)|=nd(d-1)/2-Σσ(x).",
+    "dependencies": "Classify two-paths by terminal arc.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T21",
+    "round": 3,
+    "name": "Folding Conservation Theorem",
+    "status": "SUPPORTED",
+    "statement": "Transitive two-path mass plus escape two-path mass equals nd²; lost transitive closure becomes escape mass one-for-one.",
+    "dependencies": "T19 and T20.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T22",
+    "round": 3,
+    "name": "High-Multiplicity Escape Pair Theorem",
+    "status": "SUPPORTED",
+    "statement": "At n=3d some ordered nonadjacent pair has q(x,y)≥ceil(d(d+1)/(2(d-1)))>d/2+1.",
+    "dependencies": "Average escape multiplicity using T19 and exact nonedge count.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T23",
+    "round": 3,
+    "name": "Parallel-Bridge Chamber Theorem",
+    "status": "SUPPORTED",
+    "statement": "For P=N+(x)∩N-(y), E(P,N-(x))=∅ and E(N+(y),P)=∅.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T24",
+    "round": 3,
+    "name": "Rectangle-to-C4 Theorem",
+    "status": "SUPPORTED",
+    "statement": "For H=N+(y)∩N-(x), every (p,h)∈P×H yields x→p→y→h→x; the pair lies in |P||H| directed 4-cycles.",
+    "dependencies": "Definitions of P,H.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T25",
+    "round": 3,
+    "name": "Fold-or-Expansion Theorem",
+    "status": "SUPPORTED_DICHOTOMY",
+    "statement": "For any η, either |H|<ηd and L∪R expands, or |H|≥ηd and the pair supports at least ηd|P| directed 4-cycles.",
+    "dependencies": "T24; elementary case split.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T26",
+    "round": 3,
+    "name": "Rectangle Orientation Theorem",
+    "status": "SUPPORTED",
+    "statement": "No arc points P→H; every adjacency between H and P is oriented H→P.",
+    "dependencies": "h→x→p forbids p→h.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T27",
+    "round": 3,
+    "name": "Four-Chamber Extremal Skeleton Theorem",
+    "status": "STRUCTURAL_SYNTHESIS",
+    "statement": "Surviving profiles resemble a cyclic four-chamber skeleton x→P→y→H→x with a one-way H→P reservoir.",
+    "dependencies": "T22–T26; qualitative synthesis, not a standalone universal theorem.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T28",
+    "round": 3,
+    "name": "One-Way Rectangle Saturation Lemma",
+    "status": "SUPPORTED",
+    "statement": "e(H,P)≥|H|(d-n+|P|+|H|) whenever the right side is positive.",
+    "dependencies": "Outdegree capacity for vertices of H.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "CD",
+    "round": 3,
+    "name": "Candidate D — Rectangle Diversity Lemma",
+    "status": "PROPOSAL",
+    "statement": "A large one-way H→P rectangle cannot have nearly identical tail inneighborhoods.",
+    "dependencies": "Generated from repeated forbidden-wall overlap.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "CE",
+    "round": 3,
+    "name": "Candidate E — Common-Inneighborhood Compression Lemma",
+    "status": "PROPOSAL",
+    "statement": "If H-vertex inneighborhoods overlap too strongly, a large common core should violate hereditary subcriticality.",
+    "dependencies": "Alternative to Candidate D.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T29",
+    "round": 4,
+    "name": "Escape Multiplicity Identity",
+    "status": "SUPPORTED",
+    "statement": "Σ_{ordered nonedges}q(x,y)=Σ_x e(N+(x),M_x)≥nd(d+1)/2.",
+    "dependencies": "T14/T19 with σ≥0.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T30",
+    "round": 4,
+    "name": "Ordered Nonadjacency Identity",
+    "status": "SUPPORTED",
+    "statement": "At n=3d the number of ordered nonadjacent pairs is n(d-1).",
+    "dependencies": "Exact adjacent-pair count 2nd.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T31",
+    "round": 4,
+    "name": "Super-Half Bridge Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some ordered nonedge has q(x,y)≥ceil(d(d+1)/(2(d-1)))=ceil(d/2+1+1/(d-1)).",
+    "dependencies": "T29 and T30.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T32",
+    "round": 4,
+    "name": "Bidirectional Bridge Exclusion Theorem",
+    "status": "SUPPORTED",
+    "statement": "For P=N+(x)∩N-(y), H=N+(y)∩N-(x), all P–H adjacencies point H→P.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T33",
+    "round": 4,
+    "name": "Bridge Deficit Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "For bridge size s, d^-(x)≤n-d-s+ceil(s/3)-2.",
+    "dependencies": "Hereditary deficit applied to P plus the wall N+(p)∩N-(x)=∅.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T34",
+    "round": 4,
+    "name": "Reverse-Bridge Capacity Theorem",
+    "status": "SUPPORTED",
+    "statement": "d^-(x)≤n-d-(s+1)/2; at n=3d, d^-(x)≤2d-(s+1)/2.",
+    "dependencies": "Aggregate degree demand of P using only e(P)≤binom(s,2).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T35",
+    "round": 4,
+    "name": "Total Bridge Energy Identity",
+    "status": "SUPPORTED",
+    "statement": "For fixed x, Q_x=Σ_{y∈M_x}q(x,y)=d²-e(N+(x))≥d(d+1)/2.",
+    "dependencies": "Exact escape identity.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T36",
+    "round": 4,
+    "name": "Indegree–Bridge Amplification Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some nonneighbor y has q(x,y)≥ceil(d(d+1)/(2(2d-1-d^-(x)))) at n=3d.",
+    "dependencies": "Average T35 over M_x.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T37",
+    "round": 4,
+    "name": "Exact Closure Criterion",
+    "status": "SUPPORTED_SUFFICIENT_CONDITIONS",
+    "statement": "Any of several explicit bridge-amplification or deficit inequalities would close the kernel.",
+    "dependencies": "Algebraic elimination of q and d^-(x); the listed premises were not proved.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T38",
+    "round": 4,
+    "name": "Half-Bridge Closure Theorem",
+    "status": "SUPPORTED_IMPLICATION_ONLY",
+    "statement": "If every nonedge had q(x,y)≤(d-1)/2, global escape mass would contradict the exact nonedge count.",
+    "dependencies": "T29–T30.",
+    "audit": "The premise is incompatible with the counterexample escape average and was never plausible as a counterexample property.",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T39",
+    "round": 4,
+    "name": "Half-Bridge Failure Structure Theorem",
+    "status": "SUPPORTED",
+    "statement": "Failure of the half-bridge premise yields a large one-way rectangular certificate P,H around a nonedge.",
+    "dependencies": "Definitions and T32.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T40",
+    "round": 5,
+    "name": "High-Indegree Root Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some vertex has indegree at least d.",
+    "dependencies": "Average indegree equals d.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T41",
+    "round": 5,
+    "name": "Root Escape-Energy Theorem",
+    "status": "SUPPORTED",
+    "statement": "For high-indegree root x, Σ_{y∈M}q_y=d²-e(A)≥d(d+1)/2.",
+    "dependencies": "T6 and e(A)≤binom(d,2).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T42",
+    "round": 5,
+    "name": "Bridge Export Theorem",
+    "status": "SUPPORTED",
+    "statement": "For bridge P of size s, e(P,U)≥s(d-1)-binom(s,2), yielding 2r+s≤4d-3 at n=3d.",
+    "dependencies": "Degree accounting for P and oriented internal bound.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T43",
+    "round": 5,
+    "name": "Reverse-Wall Theorem",
+    "status": "SUPPORTED",
+    "statement": "For R=N+(y), E(R,P)=∅.",
+    "dependencies": "p→y→r→p would be a triangle.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T44",
+    "round": 5,
+    "name": "Two-Block Degree Identity",
+    "status": "SUPPORTED",
+    "statement": "Exact outgoing-degree decomposition for P∪R with E(R,P)=∅.",
+    "dependencies": "Finite edge partition.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T45",
+    "round": 5,
+    "name": "Bridge Collision Identity",
+    "status": "SUPPORTED",
+    "statement": "Σ_{z∈M}binom(q(x,z),2)=Σ_{pairs {a,b}⊂A}|N+(a)∩N+(b)∩M|.",
+    "dependencies": "Double count common targets.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T46",
+    "round": 5,
+    "name": "Double-Wall Escape Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "A large common forward target set C forces |N-(a)∪N-(b)|≤2d-|C|+ceil(|C|/3)-1.",
+    "dependencies": "Hereditary deficit inside C and two forbidden inneighborhood walls.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T47",
+    "round": 5,
+    "name": "Transitive-Fan Obstruction Theorem",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "Large common in- and out-neighborhoods can coexist as a transitive layered configuration without forming a directed triangle.",
+    "dependencies": "Audit of fan concentration route.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T48",
+    "round": 5,
+    "name": "Fan-Reversal Closure Criterion",
+    "status": "SUPPORTED",
+    "statement": "For I=N-(a)∩N-(b), C=N+(a)∩N+(b), E(C,I)=∅; any forced C→I arc closes a triangle.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T49",
+    "round": 5,
+    "name": "One-Way Fan Capacity Inequality",
+    "status": "SUPPORTED",
+    "statement": "|I|≤2d-(|C|+1)/2 at n=3d.",
+    "dependencies": "Outdegree demand of C with E(C,I)=∅ and e(C)≤binom(|C|,2).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T50",
+    "round": 6,
+    "name": "Cubic-Zero Theorem",
+    "status": "SUPPORTED",
+    "statement": "tr(A³)=0.",
+    "dependencies": "Directed closed walks of length 3 are directed triangles.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T51",
+    "round": 6,
+    "name": "Reverse-Arc Annihilation Theorem",
+    "status": "SUPPORTED",
+    "statement": "A²∘Aᵀ=0.",
+    "dependencies": "A reverse arc plus a two-path creates a triangle.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T52",
+    "round": 6,
+    "name": "Two-Path Mass Theorem",
+    "status": "SUPPORTED",
+    "statement": "Σ_{x,y}(A²)_{xy}=nd².",
+    "dependencies": "A²1=d²1.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T53",
+    "round": 6,
+    "name": "Exact Support Partition Theorem",
+    "status": "SUPPORTED",
+    "statement": "Two-path mass partitions into transitive-arc endpoints and nonadjacent endpoints; reverse-arc entries vanish.",
+    "dependencies": "T51 and orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T54",
+    "round": 6,
+    "name": "Escape-Mass Floor",
+    "status": "SUPPORTED",
+    "statement": "Σ_{ordered nonedges}(A²)_{xy}≥nd(d+1)/2.",
+    "dependencies": "T53 and e(N+(x))≤binom(d,2).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T55",
+    "round": 6,
+    "name": "Two-Path Collision Theorem",
+    "status": "SUPPORTED",
+    "statement": "||A²||_F²=Σ_{u,v}|N-(u)∩N-(v)|·|N+(u)∩N+(v)|.",
+    "dependencies": "Expand the Frobenius norm.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T56",
+    "round": 6,
+    "name": "Global Fan-Energy Identity",
+    "status": "SUPPORTED",
+    "statement": "The common-in/common-out rectangle energy equals ||A²||_F².",
+    "dependencies": "T55.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T57",
+    "round": 6,
+    "name": "Row Concentration Theorem",
+    "status": "SUPPORTED",
+    "statement": "Σ_yQ_{xy}²≥d⁴/(n-1-d^-(x)).",
+    "dependencies": "Row sum d² and forced-zero support positions.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T58",
+    "round": 6,
+    "name": "Fan-Energy Floor",
+    "status": "SUPPORTED",
+    "statement": "At n=3d, ||A²||_F²≥nd⁴/(2d-1)=3d⁵/(2d-1).",
+    "dependencies": "T57, convexity, average indegree d.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T59",
+    "round": 6,
+    "name": "Multiplicity-Collapse Obstruction",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "A lower bound on ||A²||_F² can concentrate on few ordered pairs and does not force many distinct forbidden pairs.",
+    "dependencies": "Energy/support audit.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T60",
+    "round": 6,
+    "name": "Maximal-Bridge Matrix Theorem",
+    "status": "SUPPORTED",
+    "statement": "If μ=max Q_{xy}, then μ≥d²/(2d-1)>d/2 at n=3d.",
+    "dependencies": "||Q||_F²≤μΣQ=μnd² combined with T58.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T61",
+    "round": 6,
+    "name": "Large Transitive-or-Escape Fan Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some ordered pair has more than d/2 internally distinct two-paths; endpoints are either adjacent forward or nonadjacent.",
+    "dependencies": "T60 and T51.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T62",
+    "round": 6,
+    "name": "Fan-Coherence Closure Theorem",
+    "status": "PROPOSAL_UNVERIFIED",
+    "statement": "A sufficiently large exact twin class inside a fan should admit quotient compression to a smaller counterexample.",
+    "dependencies": "Suggested contraction; no complete proof supplied.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T63",
+    "round": 6,
+    "name": "Fan-Union Inequality",
+    "status": "SUPPORTED",
+    "statement": "|∪S_p|≥(Σ|S_p|)²/Σ|S_p∩S_q| and Σ|S_p|≥sd-binom(s,2).",
+    "dependencies": "Incidence Cauchy plus degree accounting.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T64",
+    "round": 6,
+    "name": "Second-Order Concentration Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some p,q in a fan have a common external outneighbor set at least the average lower bound from T63.",
+    "dependencies": "Averaging T63.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T65",
+    "round": 6,
+    "name": "Fan Cascade Theorem",
+    "status": "RETRACTED_OVERCLAIM",
+    "statement": "The second-order concentration was described as recursively iterable; that iteration was not proved.",
+    "dependencies": "Round 7 hostile audit.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T66",
+    "round": 7,
+    "name": "Fan Rectangle Prohibition Theorem",
+    "status": "SUPPORTED",
+    "statement": "For I=N-(u)∩N-(v), C=N+(u)∩N+(v), E(C,I)=∅.",
+    "dependencies": "Any c→i creates i→u→c→i.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T67",
+    "round": 7,
+    "name": "Universal Fan Capacity Theorem",
+    "status": "SUPPORTED",
+    "statement": "I(u,v)+(C(u,v)+1)/2≤2d at n=3d.",
+    "dependencies": "Outdegree demand of C, T66, e(C)≤binom(C,2).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T68",
+    "round": 7,
+    "name": "Universal Indegree Ceiling",
+    "status": "SUPPORTED",
+    "statement": "d^-(u)≤(3d-3)/2.",
+    "dependencies": "Diagonal/rooted chamber escape calculation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T69",
+    "round": 7,
+    "name": "Common-Out Sum Identity",
+    "status": "SUPPORTED",
+    "statement": "Σ_{u,v}C(u,v)=Σ_w d^-(w)².",
+    "dependencies": "Count triples u→w←v.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T70",
+    "round": 7,
+    "name": "Fan Energy Identity",
+    "status": "SUPPORTED",
+    "statement": "||A²||_F²=Σ_{u,v}I(u,v)C(u,v).",
+    "dependencies": "T55.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T71",
+    "round": 7,
+    "name": "Common-Out Energy Floor",
+    "status": "SUPPORTED",
+    "statement": "ΣC(u,v)²≥(ΣC(u,v))²/n².",
+    "dependencies": "Cauchy-Schwarz.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T72",
+    "round": 7,
+    "name": "Two-Path Energy Floor",
+    "status": "SUPPORTED",
+    "statement": "||A²||_F²≥nd⁴/(2d-1) at n=3d.",
+    "dependencies": "Same as T58.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T73",
+    "round": 7,
+    "name": "Fan-Capacity Saturation Theorem",
+    "status": "SUPPORTED",
+    "statement": "C·Λ equals missing internal adjacencies in C plus missing permitted outgoing arcs from C.",
+    "dependencies": "Exact expansion of the fan-capacity slack.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T74",
+    "round": 7,
+    "name": "Global Slack Identity",
+    "status": "SUPPORTED",
+    "statement": "2dS-||A²||_F²-(T+S)/2=Σ C(u,v)Λ(u,v).",
+    "dependencies": "Sum T73.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T75",
+    "round": 7,
+    "name": "Elimination-Ordering Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "Every proper S has an ordering with each removed vertex having residual outdegree below one third of the remaining order.",
+    "dependencies": "Hereditary deficit.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T76",
+    "round": 7,
+    "name": "Exact Hereditary Edge Bound",
+    "status": "RETRACTED",
+    "statement": "Claimed e(D[S])≤Σ(ceil(t/3)-1); false because backward arcs are not counted.",
+    "dependencies": "Refuted by a transitive tournament under reverse removal order.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T77",
+    "round": 7,
+    "name": "Hereditarily Sharpened Fan Capacity Theorem",
+    "status": "RETRACTED",
+    "statement": "Used the false T76 to replace the coefficient 1/2 by 5/6.",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T78",
+    "round": 7,
+    "name": "Coefficient Required for Closure",
+    "status": "CONDITIONAL_META",
+    "statement": "Within a simplified pointwise fan-capacity/energy architecture, an unrealistically large coefficient would be needed for closure.",
+    "dependencies": "Route analysis; not a CH theorem.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T79",
+    "round": 7,
+    "name": "One-Pair Strategy Impossibility Theorem",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "Pairwise fan statistics plus first/second moments are quantitatively insufficient in the analyzed architecture.",
+    "dependencies": "Depends partly on route estimates; preserve as methodology, not a mathematical theorem.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T80",
+    "round": 7,
+    "name": "Triple-Fan Prohibition Theorem",
+    "status": "SUPPORTED",
+    "statement": "For triple common-in I₃ and common-out C₃, E(C₃,I₃)=∅.",
+    "dependencies": "Any common middle vertex closes a triangle.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T81",
+    "round": 8,
+    "name": "Five-Sixths Escape Theorem",
+    "status": "RETRACTED",
+    "statement": "Claimed e(A,M)≥d²-F(d)≈5d²/6.",
+    "dependencies": "Depends on false T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T82",
+    "round": 8,
+    "name": "Five-Sixths Bridge Theorem",
+    "status": "RETRACTED",
+    "statement": "Claimed a bridge of size ≈5d/6 from a high-indegree root.",
+    "dependencies": "Depends on T81.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T83",
+    "round": 8,
+    "name": "Hereditary Bridge Export Theorem",
+    "status": "RETRACTED",
+    "statement": "Used false edge bound inside a bridge.",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T84",
+    "round": 8,
+    "name": "Seven-Sixths Indegree Barrier",
+    "status": "RETRACTED",
+    "statement": "Claimed high roots or all vertices satisfy d^-(x)≤7d/6+O(1).",
+    "dependencies": "Depends on T81–T83; later also overpromoted.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T85",
+    "round": 8,
+    "name": "Low-Indegree Mass Bound",
+    "status": "RETRACTED",
+    "statement": "Derived distributional bounds from T84.",
+    "dependencies": "Depends on T84.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T86",
+    "round": 8,
+    "name": "Near-Regular Core Theorem",
+    "status": "RETRACTED",
+    "statement": "Derived a large near-inregular core from T84.",
+    "dependencies": "Depends on T84.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T87",
+    "round": 8,
+    "name": "Boundary Bridge Rigidity Theorem",
+    "status": "RETRACTED",
+    "statement": "Near 7d/6 was claimed to force almost-full bridges.",
+    "dependencies": "Depends on T81–T84.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T88",
+    "round": 8,
+    "name": "Full-Bridge Boundary Theorem",
+    "status": "RETRACTED",
+    "statement": "Used F(d) from the false hereditary edge bound.",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T89",
+    "round": 8,
+    "name": "Multi-Sink Rigidity Theorem",
+    "status": "RETRACTED",
+    "statement": "Near-boundary roots claimed to force many almost-full sinks.",
+    "dependencies": "Depends on retracted density estimates.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T90",
+    "round": 8,
+    "name": "Blow-Up Backflow Prohibition Theorem",
+    "status": "PARTIAL_LOCAL_FACT",
+    "statement": "The local fact a→y implies N+(y)∩N-(a)=∅ is valid; the global near-complete blow-up conclusion was not.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T91",
+    "round": 8,
+    "name": "Inneighborhood-Union Closure Criterion",
+    "status": "PROPOSAL",
+    "statement": "A sufficiently large union of forbidden inneighborhoods would deprive a sink of d legal outtargets.",
+    "dependencies": "Generated from near-complete bridge heuristic.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T92",
+    "round": 8,
+    "name": "Three-Layer Product-Zero Theorem",
+    "status": "SUPPORTED",
+    "statement": "For B=N-(x), A=N+(x), M=M_x, tr(XYZ)=0 for cyclic matrices B→A, A→M, M→B.",
+    "dependencies": "Each positive term is a directed triangle.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T93",
+    "round": 8,
+    "name": "Tripartite Closure Criterion",
+    "status": "PROPOSAL_UNVERIFIED",
+    "statement": "A sufficiently strong tripartite supersaturation inequality would make tr(XYZ)>0.",
+    "dependencies": "No valid universal density premise was established.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T94",
+    "round": 9,
+    "name": "Corrected High-Root Barrier",
+    "status": "RETRACTED",
+    "statement": "The numerical barrier still depended on the false F(s) edge bound.",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T95",
+    "round": 9,
+    "name": "A-to-B Zero Theorem",
+    "status": "SUPPORTED",
+    "statement": "E(A,B)=∅.",
+    "dependencies": "Same as T6.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T96",
+    "round": 9,
+    "name": "First Cyclic-Layer Lower Bound",
+    "status": "RETRACTED",
+    "statement": "Used d²-F(d).",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T97",
+    "round": 9,
+    "name": "M-to-B Lower Bound",
+    "status": "RETRACTED",
+    "statement": "Used F(m).",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T98",
+    "round": 9,
+    "name": "B-to-A Lower Bound",
+    "status": "RETRACTED",
+    "statement": "Used F(r), F(m).",
+    "dependencies": "Depends on T76.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T99",
+    "round": 9,
+    "name": "Three-Layer Density Ledger",
+    "status": "RETRACTED",
+    "statement": "All three cyclic layer bounds depended on T76.",
+    "dependencies": "Depends on T96–T98.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T100",
+    "round": 9,
+    "name": "Mantel Gap Theorem",
+    "status": "RETRACTED_ROUTE",
+    "statement": "The apparent near-Mantel contradiction was an artifact of the retracted density ledger.",
+    "dependencies": "Depends on T99.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T101",
+    "round": 9,
+    "name": "Split-Chamber Obstruction Theorem",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "Whole-chamber bipartite cuts are constructions, not automatic upper bounds for triangle-free subgraphs of a tripartite host.",
+    "dependencies": "Audit of the chamber-aware Mantel route.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T102",
+    "round": 9,
+    "name": "Forbidden-Rectangle Union Theorem",
+    "status": "SUPPORTED",
+    "statement": "e(M,B)+|∪_{a∈A}(N_M^+(a)×N_B^-(a))|≤mr.",
+    "dependencies": "Each path b→a→m forbids m→b.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T103",
+    "round": 9,
+    "name": "Anticorrelation-or-Overlap Closure Theorem",
+    "status": "PROPOSAL",
+    "statement": "Closure follows if rectangle areas correlate positively and their overlap is controlled.",
+    "dependencies": "Generated from T102.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T104",
+    "round": 10,
+    "name": "One-Sided Peeling Does Not Count All Arcs",
+    "status": "SUPPORTED",
+    "statement": "Residual outdegree sums count only forward arcs in the peeling order.",
+    "dependencies": "Direct audit of T75.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T105",
+    "round": 10,
+    "name": "Exact Refutation of the Hereditary Edge Bound",
+    "status": "SUPPORTED",
+    "statement": "A transitive tournament can have zero residual outdegree under a removal order while containing binom(s,2) arcs.",
+    "dependencies": "Explicit construction.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T106",
+    "round": 10,
+    "name": "Outneighborhood Wall Theorem",
+    "status": "SUPPORTED",
+    "statement": "E(A,B)=∅.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T107",
+    "round": 10,
+    "name": "Exact Local Defect Identity",
+    "status": "SUPPORTED",
+    "statement": "e(A,M)=d(d+1)/2+σ(x).",
+    "dependencies": "Regularity and T106.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T108",
+    "round": 10,
+    "name": "Reverse-Arc Annihilation Theorem",
+    "status": "SUPPORTED",
+    "statement": "A²∘Aᵀ=0.",
+    "dependencies": "Triangle-free orientation.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T109",
+    "round": 10,
+    "name": "Two-Path Conservation Theorem",
+    "status": "SUPPORTED",
+    "statement": "A²1=d²1 and ΣQ=nd².",
+    "dependencies": "Regularity.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T110",
+    "round": 10,
+    "name": "Valid Indegree Ceiling",
+    "status": "SUPPORTED",
+    "statement": "d^-(x)≤(3d-3)/2.",
+    "dependencies": "T107 and capacity.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T111",
+    "round": 10,
+    "name": "Correct Terminal Obstruction Theorem",
+    "status": "SUPPORTED_SUMMARY",
+    "statement": "The audited elementary kernel forces escape mass but permits backward density, overlap, concentration, and long-range folding.",
+    "dependencies": "Synthesis of valid assets.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T112",
+    "round": 10,
+    "name": "Machine Closure Contract",
+    "status": "PROTOCOL",
+    "statement": "A genuine close requires an exact rational certificate, a verified new structural lemma, or an exact bounded surviving model.",
+    "dependencies": "Doctrine/Court boundary.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T113",
+    "round": 11,
+    "name": "Rooted Chamber Equations",
+    "status": "SUPPORTED",
+    "statement": "Rooted sizes and E(A,B)=∅; d²=e(A)+e(A,M).",
+    "dependencies": "Kernel.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T114",
+    "round": 11,
+    "name": "Rooted Cyclic Product-Zero Theorem",
+    "status": "SUPPORTED",
+    "statement": "Σ_{b,a,m}X_{ba}Y_{am}Z_{mb}=0.",
+    "dependencies": "Each term is b→a→m→b.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T115",
+    "round": 11,
+    "name": "Tripartite Union-Bound Theorem",
+    "status": "SUPPORTED",
+    "statement": "m e(B,A)+r e(A,M)+d e(M,B)≤2drm.",
+    "dependencies": "XYZ≥X+Y+Z-2 summed over triples.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T116",
+    "round": 11,
+    "name": "Valid M-to-B Floor",
+    "status": "SUPPORTED",
+    "statement": "e(M,B)≥max(0,d(d+1)/2-binom(m,2)).",
+    "dependencies": "Degree accounting, orientedness, valid escape floor.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T117",
+    "round": 11,
+    "name": "Exact B-to-A Ledger",
+    "status": "SUPPORTED",
+    "statement": "e(B,A)=rd-r-e(B)-e(B,M), with a derived lower bound using M–B capacity.",
+    "dependencies": "Degree partition for B.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T118",
+    "round": 11,
+    "name": "Missing Cyclic Edge Theorem",
+    "status": "SUPPORTED_DIAGNOSIS",
+    "statement": "Current valid bounds force A→M strongly and sometimes M→B, but not B→A quadratically.",
+    "dependencies": "T113–T117.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T119",
+    "round": 11,
+    "name": "Backward Reservoir Theorem",
+    "status": "SUPPORTED",
+    "statement": "If e(B,A) is small, exact degree accounting forces e(B)+e(B,M) large.",
+    "dependencies": "T117.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T120",
+    "round": 11,
+    "name": "Backward-Hierarchy Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "Hereditary deficit gives a peeling order on B; dense internal arcs may point backward across it.",
+    "dependencies": "T75 plus T104 warning.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T121",
+    "round": 11,
+    "name": "Two-Reservoir Classification Theorem",
+    "status": "STRUCTURAL_SYNTHESIS",
+    "statement": "A surviving rooted profile stores B-degree internally or in the reverse B→M direction.",
+    "dependencies": "T119.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T122",
+    "round": 11,
+    "name": "Pair-Marginal Phantom Theorem",
+    "status": "PROPOSAL_MODEL",
+    "statement": "Pairwise chamber marginals admit a zero-cyclic-product profile; no actual global graph was constructed.",
+    "dependencies": "LP-style obstruction concept.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T123",
+    "round": 11,
+    "name": "Five-Flag Necessity Theorem",
+    "status": "METHODOLOGICAL",
+    "statement": "Rooted four-flags do not retain the correlation between internal B hierarchy, B→A degree, and A→M neighborhoods.",
+    "dependencies": "Information-loss diagnosis.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R12-T124",
+    "round": 12,
+    "name": "Second-Neighborhood Deficit Theorem",
+    "status": "SUPPORTED",
+    "statement": "|N^{++}(v)\\N+(v)|≥(d+1)/2.",
+    "dependencies": "Same escape-capacity calculation as T7.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R12-T125",
+    "round": 12,
+    "name": "Folding Creates Codegree",
+    "status": "SUPPORTED",
+    "statement": "If two-step mass folds into a small support, row energy forces high multiplicity.",
+    "dependencies": "Row-sum Cauchy; equivalent to T57.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R12-T126",
+    "round": 12,
+    "name": "Concentration Self-Bound",
+    "status": "PARTIAL_RETRACTED",
+    "statement": "The exact row-energy and indegree inequalities were valid; the derived numerical q≥0.68614d was invalid.",
+    "dependencies": "Later inequality-direction audit.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R12-T127",
+    "round": 12,
+    "name": "Forced Double-Codegree Alternative",
+    "status": "PROPOSAL_QUALITATIVE",
+    "statement": "Insufficient expansion should create a large common-out set and forbidden rectangle.",
+    "dependencies": "No complete quantitative proof.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R13-T124",
+    "round": 13,
+    "name": "Retraction of the 0.686d Fan Bound",
+    "status": "SUPPORTED",
+    "statement": "The denominator inequality was substituted in the wrong direction; q≥0.68614d is withdrawn.",
+    "dependencies": "Direct inequality audit.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R13-T125",
+    "round": 13,
+    "name": "Maximum-Fan Kernel",
+    "status": "SUPPORTED",
+    "statement": "For a high-indegree root, some two-path fan has q≥d²/(2d-1)>d/2.",
+    "dependencies": "Row support and average.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R13-T126",
+    "round": 13,
+    "name": "Zero-Support Maximum-Fan Inequality",
+    "status": "SUPPORTED",
+    "statement": "d²≤q(3d-1-d^-(p)) for a fan vertex p.",
+    "dependencies": "Two-path sums supported outside N-(p) and bounded by global maximum q.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R13-T127",
+    "round": 13,
+    "name": "Fan-to-Inneighborhood Rectangle",
+    "status": "SUPPORTED",
+    "statement": "For P⊆N-(y), ∪_{p∈P}N-(p) is disjoint from N+(y), hence has size at most 2d.",
+    "dependencies": "z→p→y forbids y→z.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R13-T128",
+    "round": 13,
+    "name": "Weighted Maximum-Fan Selection",
+    "status": "SUPPORTED",
+    "statement": "Some nonempty P_{xy} has average indegree at least d.",
+    "dependencies": "Double count Σ_{x,y}Σ_{p∈Pxy}d^-(p)=dΣ_p d^-(p)².",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "R13-T129",
+    "round": 13,
+    "name": "Dual Fan Theorem",
+    "status": "SUPPORTED",
+    "statement": "There are x,z,y and C⊆N+(x)∩N+(z)∩N-(y) with |C|≥|P|/2 for a weighted fan P.",
+    "dependencies": "T127, T128, incidence averaging.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T130",
+    "round": 14,
+    "name": "First Three Vanishing Trace Theorem",
+    "status": "SUPPORTED",
+    "statement": "tr(A)=tr(A²)=tr(A³)=0.",
+    "dependencies": "No loops, digons, or directed triangles.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T131",
+    "round": 14,
+    "name": "Perron Moment Cancellation Theorem",
+    "status": "SUPPORTED",
+    "statement": "The non-Perron eigenvalues cancel d in the first three power sums.",
+    "dependencies": "A1=d1 and T130.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T132",
+    "round": 14,
+    "name": "Singular-Energy Budget Theorem",
+    "status": "SUPPORTED",
+    "statement": "||A||_F²=3d² and residual singular-value squared mass is at most 2d².",
+    "dependencies": "A has 3d² ones and singular norm dominates Perron direction.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T133",
+    "round": 14,
+    "name": "Spectral Modulus Budget",
+    "status": "SUPPORTED",
+    "statement": "Σ_{i≥2}|λ_i/d|²≤2.",
+    "dependencies": "Eigenvalue moduli are bounded by singular-value energy.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T134",
+    "round": 14,
+    "name": "Cubic Defect Identity",
+    "status": "SUPPORTED",
+    "statement": "Σ μ_i(1-μ_i)=Σ μ_i²(1-μ_i)=Σ μ_i(1-μ_i)²=0.",
+    "dependencies": "Subtract normalized moment equations.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T135",
+    "round": 14,
+    "name": "Real-Part Defect Formula",
+    "status": "SUPPORTED",
+    "statement": "Re[z(1-z)²]=r cosθ-2r² cos2θ+r³ cos3θ.",
+    "dependencies": "Direct algebra.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T136",
+    "round": 14,
+    "name": "Peripheral Period Theorem",
+    "status": "SUPPORTED_STANDARD",
+    "statement": "For irreducible d-regular A, peripheral eigenvalues are d times roots of unity determined by the period.",
+    "dependencies": "Perron–Frobenius theory.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T137",
+    "round": 14,
+    "name": "Aperiodicity Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "A minimal kernel is primitive after eliminating periods 2 and 3.",
+    "dependencies": "T138 plus class-size/arc-count arguments.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T138",
+    "round": 14,
+    "name": "Strong Connectivity Theorem",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "A smallest counterexample is strongly connected.",
+    "dependencies": "A sink SCC would be a smaller induced counterexample.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T139",
+    "round": 14,
+    "name": "Strict Spectral Radius Gap",
+    "status": "SUPPORTED_CONDITIONAL",
+    "statement": "All non-Perron eigenvalues satisfy |λ|<d.",
+    "dependencies": "T137.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T140",
+    "round": 14,
+    "name": "Abstract Spectral Phantom",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "The abstract finite moment system may be feasible; moments alone do not encode entrywise support.",
+    "dependencies": "Spectrum-only route audit.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T141",
+    "round": 14,
+    "name": "Energy Equality Rigidity Theorem",
+    "status": "SUPPORTED",
+    "statement": "Equality in the continuous row-energy floor forces d=1; for d>1 the inequality is strict.",
+    "dependencies": "Uniform support plus integrality and gcd(d,2d-1)=1.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T142",
+    "round": 14,
+    "name": "Exact Integral Row-Energy Floor",
+    "status": "SUPPORTED",
+    "statement": "If d²=kq+t, the integer row energy is at least (k-t)q²+t(q+1)².",
+    "dependencies": "Convexity over integer vectors.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T143",
+    "round": 15,
+    "name": "Opposite Two-Path Product Theorem",
+    "status": "SUPPORTED",
+    "statement": "For Q=A², tr(A⁴)=Σ_{x,y}Q_{xy}Q_{yx}=4C4(D).",
+    "dependencies": "Closed length-4 walks in an oriented loopless graph are directed 4-cycles.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T144",
+    "round": 15,
+    "name": "Opposite Vertices Are Nonadjacent",
+    "status": "SUPPORTED",
+    "statement": "Opposite vertices of a directed 4-cycle are nonadjacent.",
+    "dependencies": "Either diagonal orientation creates a directed triangle.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T145",
+    "round": 15,
+    "name": "Exact Nonedge Count",
+    "status": "SUPPORTED",
+    "statement": "The number of unordered nonedges is 3d(d-1)/2.",
+    "dependencies": "Total pairs minus 3d² occupied adjacent pairs.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T146",
+    "round": 15,
+    "name": "Escape-Mass Floor",
+    "status": "SUPPORTED",
+    "statement": "The ordered nonedge two-path mass is at least 3d²(d+1)/2.",
+    "dependencies": "Rootwise escape mass summed.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T147",
+    "round": 15,
+    "name": "Forced Opposite-Path Product Theorem",
+    "status": "SUPPORTED",
+    "statement": "Σ_{unordered nonedges}Q_{xy}Q_{yx}≥3d³.",
+    "dependencies": "Pointwise (d-a)(d-b)≥0 plus T145–T146.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T148",
+    "round": 15,
+    "name": "Cubic Directed-C4 Theorem",
+    "status": "SUPPORTED_TERMINAL_ASSET",
+    "statement": "C4(D)≥ceil(3d³/2), equivalently tr(A⁴)≥6d³.",
+    "dependencies": "T143 and T147.",
+    "audit": "",
+    "certificate_route": "Exact integer checker; Lean trace formalization."
+  },
+  {
+    "id": "T149",
+    "round": 15,
+    "name": "Every Kernel Contains a Directed C4",
+    "status": "SUPPORTED",
+    "statement": "A triangle-free exact-boundary regular kernel necessarily contains a directed 4-cycle.",
+    "dependencies": "T148.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T150",
+    "round": 15,
+    "name": "Heavy Four-Cycle Vertex Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some vertex lies on at least 2d² directed 4-cycles.",
+    "dependencies": "Average T148 over 3d vertices.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T151",
+    "round": 15,
+    "name": "Heavy Bidirectional Bridge Theorem",
+    "status": "SUPPORTED",
+    "statement": "Some nonedge {x,y} has Q_{xy}Q_{yx}≥ceil(2d²/(2d-1)).",
+    "dependencies": "Average the heavy-vertex product over its nonneighbors.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T152",
+    "round": 15,
+    "name": "Asymmetric Four-Cycle Reservoir Theorem",
+    "status": "STRUCTURAL_DIAGNOSIS",
+    "statement": "The C4 lower bound is compatible with Q_{xy}≈d and Q_{yx}=O(1) on significant pairs.",
+    "dependencies": "Average product is only Θ(d), not Θ(d²).",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  },
+  {
+    "id": "T153",
+    "round": 15,
+    "name": "Exact Fourth-Moment Decomposition",
+    "status": "SUPPORTED",
+    "statement": "tr(A⁴)=||A²||_F²-(1/2)||A²-(Aᵀ)²||_F²; C4 is one quarter of this.",
+    "dependencies": "Symmetric/skew decomposition of Q.",
+    "audit": "",
+    "certificate_route": "Exact finite/integer proof or local combinatorial verification"
+  }
+]
