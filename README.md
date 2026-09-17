@@ -1,30 +1,41 @@
-# Caccetta–Häggkvist directed-triangle program
+# Caccetta–Häggkvist Directed Triangles
 
-**Author:** Jared Wilder  
-**Status:** research program / partial structural results; the Caccetta–Häggkvist conjecture is **not claimed solved**.
+**Jared Wilder**
 
-This repository is the canonical public home for the estate's directed-triangle campaign. It preserves the theorem ledger, terminal-defect package, recovered defect-budget work, correction history, and exact finite relation-table evidence in one subject-focused location.
+Structural work on the `r=3` case of the Caccetta–Häggkvist conjecture, with a focus on the exact boundary of a hypothetical minimum counterexample.
 
-## What is here
+## Main structure
 
-The source program develops exact-boundary structure for a hypothetical minimum counterexample at `r=3`, including regularity forced by arc-minimality, the `n in {3d-1,3d}` boundary, fourth-moment lower bounds, critical-edge common-outneighbor bounds, and the defect identity replacing a looser edge-potential route. It also preserves corrected/retracted statements rather than silently deleting them.
+The program develops:
 
-The exact historical source bytes are migrated under `source/` from `jaredwilder/unpublished-math-papers/caccetta-haggkvist/`.
+- regularity forced by arc-minimality;
+- the boundary `n ∈ {3d-1, 3d}`;
+- fourth-moment lower bounds;
+- critical-edge common-outneighbor bounds;
+- a defect identity replacing an earlier edge-potential route;
+- exact finite relation-table evidence around the terminal defect configuration.
 
-## Reading rule
+The source packet contains 166 theorem, candidate, diagnostic, and correction records from the fifteen-round campaign. Its useful mathematical content is preserved here by subject rather than buried in a session archive.
 
-A theorem ledger entry is not automatically a closure of the conjecture. Conditional reductions, exact finite classifications, negative results, and open obligations remain status-separated.
+## Source packet
 
-Historical novelty is a separate literature question from mathematical correctness.
+Historical source bytes live under `source/`, migrated from `jaredwilder/unpublished-math-papers/caccetta-haggkvist/`.
 
-## Recovered original source packet — 2026-09-13
+Key files:
 
-The original fifteen-round packet contains 166 theorem, candidate, diagnostic and retraction records. The source retraction register is essential reading. Its cubic directed-C4 result is explicitly awaiting independent verification; this release does not certify all ledger entries.
+- [theorem ledger](source/big-guns-2026-08-06/THEOREM-LEDGER.json)
+- [master dossier](source/big-guns-2026-08-06/CH3-BIG-GUNS-MASTER-DOSSIER.md)
+- [retraction register](source/big-guns-2026-08-06/RETRACTION-REGISTER.md)
+- [source verification summary](verification/source-packet.json)
 
-- [Original record table](source/big-guns-2026-08-06/THEOREM-LEDGER.json)
-- [Source packet](source/big-guns-2026-08-06/)
-- [Source hashes and observed status counts](verification/source-packet.json)
+Run
 
-Read the [retraction register](source/big-guns-2026-08-06/RETRACTION-REGISTER.md) alongside the [master dossier](source/big-guns-2026-08-06/CH3-BIG-GUNS-MASTER-DOSSIER.md). Historical supported/proposal statuses are source assertions; this packet has no executable proof verification in this release.
+```sh
+python verification/verify_source_packet.py
+```
 
-Run `python verification/verify_source_packet.py` to verify all recovered source bytes, original JSON manifests when present, and record counts.
+to verify recovered source hashes, manifests, and record counts.
+
+## Status
+
+The repository contains partial structural results and exact finite evidence toward the directed-triangle problem. The full Caccetta–Häggkvist conjecture is not resolved here.
